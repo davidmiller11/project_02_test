@@ -1,13 +1,12 @@
 class MemesController < ApplicationController
 
+  def new
+    @meme = Meme.new
+  end
+
 	def create
 		@meme = Meme.create(memes_params)
-
-		respond_to do |format|
-			format.html { redirect_to @meme}
-			format.js
-			format.json { render @meme.to_json}
-		end
+		redirect_to @meme
 	end
 
 	private
@@ -15,5 +14,4 @@ class MemesController < ApplicationController
 		params.require(:memes).permit(:name, :hipster_lvl, :outdated_ness, :glasses_worn)
 		
 	end
-
 end

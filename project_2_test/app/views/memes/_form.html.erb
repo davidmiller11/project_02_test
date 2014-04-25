@@ -1,0 +1,27 @@
+<%= form_for @meme do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.number_field :name %>
+</p>
+
+<p>
+  <%= f.label :hipster_lvl %>
+  <%= f.number_field :hipster_lvl %>
+</p>
+
+<p>
+  <%= f.label :outdated_ness %>
+  <%= f.text_field :outdated_ness %>
+</p>
+
+<p>
+  <%= f.label :glasses_worn %>
+  <%= f.text_field :glasses_worn %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>

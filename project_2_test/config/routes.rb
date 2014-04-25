@@ -1,5 +1,6 @@
 Project2Test::Application.routes.draw do
 
-resources :memes
+    get ('/'), to:    'memes#index'
+    resources :memes
 
 end
